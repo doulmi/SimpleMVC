@@ -26,6 +26,8 @@ project                 Root
 #### 1. Clone
 
 ```
+https://github.com/doulmi/SimpleMVC.git
+git checkout master
 ```
 
 #### 2. Create Database 
@@ -33,10 +35,19 @@ project                 Root
 #### 3. Modify configurations in config/config.php
 
 ```
-$config['db']['host'] = 'localhost';
-$config['db']['username'] = 'root';
-$config['db']['password'] = '123456';
-$config['db']['dbname'] = 'project';
+return [
+    'db' => [
+        'host' => 'localhost',
+        'username' => 'root',
+        'password' => '',
+        'dbname' => 'project',
+    ],
+
+    'defaultController' => 'Menus',
+    'defaultAction' => 'index',
+    'allowedCors' => true,
+];
+
 ```
 
 #### 4. Test
@@ -44,13 +55,11 @@ $config['db']['dbname'] = 'project';
 
 ## Frontend - Build with Vue-cli, Vuejs, Vuex, Vue-router, Axios
 
-# install dependencies
-npm install
+### install dependencies
+```npm install```
 
-# serve with hot reload at localhost:8080
-npm run dev
+### serve with hot reload at localhost:8080
+```npm run dev```
 
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
+### build for production with minification
+```npm run build```
